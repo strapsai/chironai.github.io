@@ -26,16 +26,36 @@
       height: 100%;
       line-height: 1.8;
     }
+    /* Default (smaller screens) */
     .navbar-logo {
-    height: 72px; /* Adjust this value based on your navbar height */
-    width: auto;  /* Keeps the aspect ratio */
-}
+      height: 24px;  /* Smaller size for mobile devices or small screens */
+      width: auto;   /* Keep the aspect ratio */
+    }
+
+    /* For medium-sized screens and above (tablets, desktops) */
+    @media (min-width: 768px) {
+      .navbar-logo {
+        height: 30px;  /* Medium size */
+      }
+    }
+
+    /* For larger screens (desktops, wide monitors) */
+    @media (min-width: 1024px) {
+      .navbar-logo {
+        height: 72px;  /* Larger size for big screens */
+      }
+    }
 
     /* Full height image header */
     .bgimg-1 {
-      background-position: center;
-      background-size: cover;
       /* background-color: rgb(0, 0, 0); */
+      /* background-image: url("images/main_cover_bg.gif"); */
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)), url('images/main_bg_cover.gif');
+      /* background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)), url('https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExM3BoNXhvaG11M2x2cTYzaGkyMWhsNTg3MWZhZzZiNWlnazQ0bDhrZyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/jK7995eCL9wL2Ld0AT/giphy-downsized-large.gif'); */
+
+      background-size: contain; /* Contain the GIF without zooming in */
+      background-position: center;
+      background-repeat: no-repeat;
       min-height: 100%;
     }
     /* Full height image header */
@@ -47,9 +67,19 @@
       min-height: 100%;
     }
 
+
     .w3-bar .w3-button {
       padding: 16px;
-    }
+  }
+  .three-d-text {
+  font-weight: bold;
+  color: #f0edff; /* Main text color */
+  text-shadow: 
+    3px 3px 0px rgba(0, 0, 0, 0.6),   /* Darker shadow for depth */
+    6px 6px 0px rgba(0, 0, 0, 0.4),   /* Slightly lighter shadow */
+    9px 9px 0px rgba(0, 0, 0, 0.3);   /* Final layer for strong 3D effect */
+}
+
     </style>
   </head>
 <body>
@@ -87,39 +117,23 @@
 <!-- Header with full-height image -->
 <header class="bgimg-1 w3-display-container w3-grayscale-min w3-black" id="home">
   <div class="w3-display-left w3-text-white" style="padding:48px">
-    <span class="w3-jumbo w3-hide-small">Team Chiron</span><br>
-    <span class="w3-xxxlarge w3-hide-small">Making remote autonomous triage a reality</span><br>
-    <span class="w3-xxlarge w3-hide-large w3-hide-medium">Team Chiron : Making remote autonomous triage a reality</span><br>
-    <span class="w3-xlarge">Developing robotic systems that assess casualties and monitor vital signs, optimizing first responder deployment.</span>
+    <span class="three-d-text w3-jumbo w3-hide-small">Team Chiron</span><br>
+    <span class="three-d-text w3-xxxlarge w3-hide-small">Making remote autonomous triage a reality</span><br>
+    <span class="three-d-text w3-xxlarge w3-hide-large w3-hide-medium">Team Chiron : Making remote autonomous triage a reality</span><br>
+    <span class="three-d-text w3-xlarge">Developing robotic systems that assess casualties and monitor vital signs, optimizing first responder deployment.</span>
     <!-- <p><a href="#about" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Learn more and start today</a></p> -->
     <br><br>
-    <!-- <div class="logo_container">
-      <a href="https://www.cmu.edu"><img class="sponsor_logo" src="https://www.cmu.edu/brand/brand-guidelines/images/wordmarksquare-red-600x600.png" target="_blank"></a>
-      <a href="https://www.pitt.edu"><img class="sponsor_logo" src="pitt.png" target="_blank"></a>
-      <a href="https://www.darpa.mil"><img class="sponsor_logo" src="https://triagechallenge.darpa.mil/images/global/DARPA-logo-fullsize.png" target="_blank"></a>
-      <a href="https://www.flir.com"><img class="sponsor_logo" src="flir.png"></a>
-      <a href="https://www.rti.com"><img class="sponsor_logo" src="https://www.rti.com/hubfs/Master%20Graphics%20Folder/Logos/RTI/RTI-Logo-rev.svg" target="_blank"></a>
-      <a href="https://www.lockheedmartin.com/en-us/index.html"><img class="sponsor_logo" src="lockhead.jpeg" target="_blank"></a>
-  </div>  -->
+
   <div class="logo_container">
     <a href="https://triagechallenge.darpa.mil/"><img class="sponsor_logo" src="logos/logo_dtc.png" target="_blank"></a>
     <a href="https://www.cmu.edu"><img class="sponsor_logo" src="https://www.cmu.edu/brand/brand-guidelines/images/wordmarksquare-red-600x600.png" target="_blank"></a>
     <a href="https://www.pitt.edu"><img class="sponsor_logo" src="logos/logo_pitt.png" target="_blank"></a>
-    <!-- <a href="https://www.darpa.mil"><img class="sponsor_logo" src="https://triagechallenge.darpa.mil/images/global/DARPA-logo-fullsize.png" target="_blank"></a> -->
-</div> 
+  </div> 
 
-
-    <span class="w3-xlarge">Our work is supported by our sponsors. Will you join us in making a difference? <a href="mailto:darpa-triage@cmu.edu">Email Us</a></span>
+    <span class="three-d-text w3-xlarge">Our work is supported by our sponsors. Will you join us in making a difference? <a href="mailto:darpa-triage@cmu.edu">Email Us</a></span>
 
 </div>
-  <!-- <div class="w3-display-bottomleft w3-text-grey w3-large" style="padding:24px 48px">
-    <i class="fa fa-facebook-official w3-hover-opacity"></i>
-    <i class="fa fa-instagram w3-hover-opacity"></i>
-    <i class="fa fa-snapchat w3-hover-opacity"></i>
-    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
-    <i class="fa fa-twitter w3-hover-opacity"></i>
-    <i class="fa fa-linkedin w3-hover-opacity"></i>
-  </div> -->
+
 </header>
 
 <!-- About Section -->
@@ -146,10 +160,11 @@
 </div>
 
 <!-- Promo Section - "We know design" -->
-<div class="bgimg-2 w3-container w3-grey" style="padding:128px 16px" id="timeline">
+<div class="w3-container w3-grey" style="padding:128px 16px" id="timeline">
   <div class="w3-row-padding">
   <h3 class="w3-center w3-white">Timeline</h3>
 
+<!-- Vertical from below -->
     <div class="timeline">
       <div class="container_timeline left">
         <div class="content_timeline">
