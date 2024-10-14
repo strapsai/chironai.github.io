@@ -486,5 +486,91 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
     height: auto;
   }
 }
+/* Slideshow container */
+.slideshow-container img {
+  width: 100%;           /* Make the image take the full width of the container */
+  max-height: 500px;      /* Set a maximum height to prevent the image from being too tall */
+  object-fit: contain;      /* Ensures the image covers the area without distortion */
+
+  margin: auto;
+}
+
+/* Hide the slides initially */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* Add hover effects to buttons */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+/* Highlight the active dot */
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation for slides */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* Adjust text size for smaller screens */
+@media only screen and (max-width: 300px) {
+  .prev, .next, .text {
+    font-size: 11px;
+  }
+}
 
 

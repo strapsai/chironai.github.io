@@ -212,6 +212,36 @@
 </div>
 </div>
 
+
+<div class="w3-container w3-black" style="padding:128px 16px">
+  <h3 class="w3-center">Team Chiron at the DARPA Triage Challenge 2024</h3>
+  <div class="slideshow-container">
+    <div class="mySlides fade">
+      <img src="images/images_team.jpg" style="width:100%">
+    </div>
+    <div class="mySlides fade">
+      <img src="images/image_2.jpg" style="width:100%">
+    </div>
+    <div class="mySlides fade">
+      <img src="images/image_3.jpg" style="width:100%">
+    </div>
+    <div class="mySlides fade">
+      <img src="images/image_4.png" style="width:100%">
+    </div>
+    <!-- <a class="prev" onclick="plusSlides(-1)">❮</a>
+    <a class="next" onclick="plusSlides(1)">❯</a> -->
+  </div>
+  
+  <br>
+  
+  <div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span> 
+    <span class="dot" onclick="currentSlide(2)"></span> 
+    <span class="dot" onclick="currentSlide(3)"></span> 
+    <span class="dot" onclick="currentSlide(4)"></span> 
+  </div>
+</div>
+
 <!-- Team Section -->
 <div class="w3-container" style="padding:128px 16px" id="team">
   <h3 class="w3-center">The Team</h3>
@@ -557,6 +587,39 @@ function w3_open() {
 // Close the sidebar with the close button
 function w3_close() {
     mySidebar.style.display = "none";
+}
+let slideIndex = 1;
+showSlides(slideIndex);
+
+// Function to go to the next/previous slide
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Function to go to the specific slide
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+// Function to display the slides and the active dot
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
 }
 </script>
 
