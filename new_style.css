@@ -396,7 +396,7 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
     /* text-align: center; */
 }
 .sponsor_logo{
-    height:80px;
+    height:100px;
     float:left;
     padding:10px;
     /* transition-duration:0.1s; */
@@ -407,3 +407,84 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
     padding:10px;
     transition-duration:0.1s;
 }
+
+/* Updating for media responsiveness */
+/* Style for sponsor logos section */
+.logo-row {
+  display: flex;
+  /* justify-content: center; */
+  justify-content: space-evenly;
+  align-items: center;
+  /* flex-wrap: wrap; */
+  flex-wrap: nowrap;
+  gap: 16px; /* Space between logos */
+}
+
+/* Large logos */
+.logo-large {
+  max-width: 11%;  /* 20% of the row's width */
+  height: auto;    /* Maintain aspect ratio */
+}
+
+
+/* Medium logos */
+.logo-medium {
+  max-width: 20%;  /* 18% of the row's width */
+  height: auto;    /* Maintain aspect ratio */
+}
+
+.logo-medium-second-row {
+  max-width: 15.02%;  /* 15% of the row's width */
+  height: auto;    /* Maintain aspect ratio */
+  object-fit: cover;
+}
+
+
+/* Small logos */
+.logo-small {
+  max-width: 6%;  /* 10% of the row's width */
+  height: auto;    /* Maintain aspect ratio */
+}
+
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .logo-large {
+    max-width: 25%;  /* Make logos larger for smaller screens */
+    height: auto;
+  }
+  .logo-medium {
+    max-width: 20%;  /* Adjust size for medium logos */
+    height: auto;
+  }
+  .logo-medium-second-row {
+    max-width: 18%;  /* Adjust size for medium logos */
+    height: auto;
+  }
+  .logo-small {
+    max-width: 10%;  /* Adjust size for small logos */
+    height: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-large {
+    max-width: 25%;  /* Make logos even larger for mobile screens */
+    height: auto;
+  }
+  .logo-medium {
+    max-width: 20%;  /* Adjust size for medium logos */
+    height: auto;
+  }
+  .logo-medium-second-row {
+    max-width: 18%;  /* Adjust size for medium logos */
+    height: auto;
+  }
+  .logo-small {
+    max-width: 10%;  /* Adjust size for small logos */
+    height: auto;
+  }
+}
+
+
