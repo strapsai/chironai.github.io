@@ -422,18 +422,23 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
 
 /* Large logos */
 .logo-large {
-  max-width: 11%;  /* 20% of the row's width */
+  max-width: 9%;  /* 20% of the row's width */
   height: auto;    /* Maintain aspect ratio */
 }
 
 
 /* Medium logos */
 .logo-medium {
-  max-width: 20%;  /* 18% of the row's width */
+  max-width: 18%;  /* 18% of the row's width */
   height: auto;    /* Maintain aspect ratio */
 }
 
 .logo-medium-second-row {
+  max-width: 15.02%;  /* 15% of the row's width */
+  height: auto;    /* Maintain aspect ratio */
+  object-fit: cover;
+}
+.logo-medium-third-row {
   max-width: 15.02%;  /* 15% of the row's width */
   height: auto;    /* Maintain aspect ratio */
   object-fit: cover;
@@ -572,5 +577,23 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
     font-size: 11px;
   }
 }
+
+/* Overall container */
+.section-container {
+  padding: 16px;
+  background-color: #000; /* Dark background */
+}
+
+/* Text styles */
+.text-center {
+  text-align: center;
+}
+
+.text-large {
+  font-size: 1.25rem;
+}
+
+
+
 
 
